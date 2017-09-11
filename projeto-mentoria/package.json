@@ -1,7 +1,7 @@
 {
   "name": "gulp_project",
   "version": "1.0.0",
-  "description": "Gulp test project, for improve my abilityes in the web ",
+  "description": "Gulp tasks test, for improve my abilityes in the web projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
