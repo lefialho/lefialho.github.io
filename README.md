@@ -6,10 +6,10 @@ Esse repositório será utilizado para treinar os recursos aprendidos no mentori
 
 ## Objetivos
 
-- Utilizar esse repositório como referência para portfólio; 
-- Melhorar o conhecimento para desenvolvimento de sites;
-- Melhorar a concepção de UX design;
-- Melhorar as técnicas de desenvolvimento front-end;
+- Utilizar esse repositório como referência para portfólio
+- Melhorar o conhecimento para desenvolvimento de sites
+- Melhorar a concepção de UX design
+- Melhorar as técnicas de desenvolvimento front-end
 
 ## links
 
