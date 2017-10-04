@@ -13,7 +13,6 @@ const del = require('del');
 const runSequence = require('run-sequence');
 
 
-
 // Devlopment Tasks 
 
 gulp.task('browserSync', function() {
