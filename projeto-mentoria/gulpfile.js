@@ -54,7 +54,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
 
 //Optimization tasks
 
-gulp.task('useref', function(){
+gulp.task('useref', function() {
   return gulp.src('src/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
@@ -107,7 +107,7 @@ gulp.task('default', function(callback) {
 })
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['useref', 'useref-int', 'images', 'sprites', 'copy'],
+  runSequence('clean:dist', ['useref', 'images', 'sprites'],
     callback
   )
 })
