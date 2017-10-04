@@ -1,36 +1,20 @@
-var gulp = require('gulp');
-// Requires browserSync
-var browserSync = require('browser-sync').create();
-// Requires the gulp-sass plugin
-var sass = require('gulp-sass');
-// Requires the gulp-useref concat js and css files plugin
-var useref = require('gulp-useref');
-// Requires the uglify plugin that minify js
-var uglify = require('gulp-uglify');
-// Requires the cssnano plugin to minify css
-var cssnano = require('gulp-cssnano');
-// Requires the gulp-if plugin
-var gulpIf = require('gulp-if');
-// Requires the gulp-imagemin plugin to minify images
-var imagemin = require('gulp-imagemin');
-// Requires svg-sprite plugin
-var svgSprite = require('gulp-svg-sprite');
-// Requires the gulp-cache plugin to optimize the speed image minification
-var cache = require('gulp-cache');
-// Requires the del plugin to clean files
-var del = require('del');
-// Requires run-sequence plugin
-var runSequence = require('run-sequence');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug');
+const sass = require('gulp-sass');
+const useref = require('gulp-useref');
+const uglify = require('gulp-uglify');
+const cssnano = require('gulp-cssnano');
+const gulpIf = require('gulp-if');
+const imagemin = require('gulp-imagemin');
+const svgSprite = require('gulp-svg-sprite');
+const cache = require('gulp-cache');
+const del = require('del');
+const runSequence = require('run-sequence');
 
-
-// Basic Gulp task 
-gulp.task('hello', function() {
-  console.log('Hello Zell!');
-})
 
 
 // Devlopment Tasks 
-// -----------------
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -40,9 +24,17 @@ gulp.task('browserSync', function() {
   })
 })
 
+gulp.task('pug', function() {
+  return gulp.src('src/views/**/*.pug')
+  .pipe(pug({
+      pretty: true
+    }))
+  .pipe(gulp.dest('src'));
+});
+
 
 gulp.task('sass', function() {
-  return gulp.src('src/scss/**/*.scss') // Gets all files ending with .scss in src/scss
+  return gulp.src('src/scss/**/*.scss') 
     .pipe(sass())
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
@@ -53,33 +45,27 @@ gulp.task('sass', function() {
 
 //Watchers
 
-//Read browserSynk and sass before watch
-gulp.task('watch', ['browserSync', 'sass'], function (){
-  // Reloads the browser whenever SCSS files change
+gulp.task('watch', ['browserSync', 'sass'], function() {
   gulp.watch('src/scss/**/*.scss', ['sass']); 
-  // Reloads the browser whenever HTML or JS files change
-  gulp.watch('src/*.html', browserSync.reload); 
+  gulp.watch('src/views/**/*.pug', ['pug']); 
+  gulp.watch('src/**/*.html', browserSync.reload); 
   gulp.watch('src/js/**/*.js', browserSync.reload); 
 });
 
 
 //Optimization tasks
-//-------------------
 
 gulp.task('useref', function(){
   return gulp.src('src/*.html')
     .pipe(useref())
-    // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
-    // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
 
-gulp.task('images', function(){
+gulp.task('images', function() {
   return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
   .pipe(cache(imagemin({
       interlaced: true
     })))
@@ -87,29 +73,26 @@ gulp.task('images', function(){
 });
 
 
-//SVG sprite task
 var config = {
   mode: {
     symbol: {
       dest: 'dist/sprites',
-      sprite: 'sprite.svg', //nome do sprite
-      example: true // criar página de exemplo
+      sprite: 'sprite.svg', 
+      example: true 
     }
   },
   svg:{
-    xmlDeclaration: false, //não criar xml no svg
-    doctypeDeclaration: false //não criar doctype no svg
+    xmlDeclaration: false,
+    doctypeDeclaration: false 
   }
 };
 
-gulp.task('sprites', function(){
+gulp.task('sprites', function() {
   return gulp.src('src/icons/**/*.svg')
     .pipe(svgSprite(config))
     .pipe(gulp.dest('.'))
 });
 
-
-//Cleaning task
 
 gulp.task('clean:dist', function() {
   return del.sync('dist');
@@ -117,17 +100,15 @@ gulp.task('clean:dist', function() {
 
 
 // Task Sequences
-// ---------------
 
-gulp.task('build', function (callback) {
-  runSequence('clean:dist', ['sass', 'useref', 'images', 'sprites'],
+gulp.task('default', function(callback) {
+  runSequence(['sass', 'pug', 'browserSync', 'watch'],
     callback
   )
 })
 
-
-gulp.task('default', function (callback) {
-  runSequence(['sass','browserSync', 'watch'],
+gulp.task('build', function(callback) {
+  runSequence('clean:dist', ['useref', 'useref-int', 'images', 'sprites', 'copy'],
     callback
   )
 })

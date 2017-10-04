@@ -1,0 +1,20 @@
+doctype
+html
+	head
+	title= "Home page"
+	// build:css css/styles.min.css
+	link(rel="stylesheet" href="css/styles.css")
+	// endbuild
+body
+	h1 Testando tarefas do gulp
+	.tasks
+		h2 Primeiros testes
+		ul
+			each val in ['Minificar CSS e JS', 'Rodar projeto ao vivo com o navegador', 'Utilizar o PUG par gerar HTML', 'Concatenar as tarefas', 'Reduzir imagens', 'Construir sprites em SVG', 'Instalar o Sass', 'Gerar fonts', 'Adicionar o Watch']
+				li= val
+
+	// build:js js/all.min.js
+	script(src="js/lib/lib_1.js")
+	script(src="js/lib/lib_2.js")
+	script(src="js/main.js")
+	// endbuild
