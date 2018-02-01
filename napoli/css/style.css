@@ -1,0 +1,56 @@
+body{
+    padding-top: 113px;
+}
+
+.box-shadow{
+    box-shadow: 0 2px 4px rgba(0,0,0,.05),
+        0 4px 8px rgba(0,0,0,.05);
+}
+
+.icone{
+    height: 95px;
+}
+
+#perguntasFrequentes .pergunta + .pergunta{
+    border-bottom: 1px solid #e9ecef;
+    padding: 0.5rem 0;
+}
+
+#quote{
+    background: url('../img/bg-quote.jpg') center center;
+    background-size: cover;
+}
+
+.redes-sociais .btn{
+    max-width: 200px;
+}
+
+.lista-plano li + li{
+    border-top: 1px solid #e9ecef;
+}
+
+.lista-plano li {
+    padding: 0.5rem 0;
+}
+
+.logo{
+    max-width: 200px;
+}
+
+@media (max-width: 768px) {
+    body{
+        padding-top: 0px;
+    }
+
+    .fixed-top {
+        position: initial;
+    }
+
+    #quote .display-4{
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        max-width: 150px;
+    }
+}

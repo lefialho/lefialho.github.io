@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>napoli - Local</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body> 
+        
+        <!-- Navegação -->
+        
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light box-shadow py-3"> <!-- expand-md - expande os itens do menu depois de 768px-->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/napoli.svg" class="logo img-fluid" alt="napoli">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> <!-- Cria o menu hamburguer-->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+                <ul class="navbar-nav ml-auto"> <!-- Add uma margin-left auto no item-->
+                    <li class="nav-item dropdown mt-2 mt-md-0 ">
+                        <a href="#" class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locais</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="local.html" class="dropdown-item">Califórnia</a>
+                            <a href="local.html" class="dropdown-item">Londres</a>
+                            <a href="local.html" class="dropdown-item">Dublin</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mt-2 mt-md-0"> <!-- Add uma margin-top no item e retira acima do tamanho medium-->
+                        <a href="planos.html" class="nav-link">Planos</a>
+                    </li>
+                    <li class="nav-item mt-2 mt-md-0">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>   
+                    <li class="nav-item mt-2 mt-md-0">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#modalLogin">Login</a>
+                    </li>
+                    <li class="nav-item mt-2 mt-md-0">
+                        <a href="inscricao.html" class="btn btn-outline-primary ml-md-2">Inscreva-se</a> <!-- ml-md-2 add uma margin-left quando a tela for acima de tamanho medium-->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Modal Login -->
+        
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitulo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLoginTitulo">Entre na sua conta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="loginEmail">Email</label>
+                                <input type="email" class="form-control" id="loginEmail">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginSenha">Senha</label>
+                                <input type="password" class="form-control" id="loginSenha">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar na conta</button>
+                            <small id="emailHelp" class="form-text text-muted">Esqueceu a senha <a href="#">Clique aqui</a></small>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Galeria -->
+        
+        <section class="container text-center">
+            <div class="my-5">
+                <span class="h6 d-block text-uppercase">O melhor para você</span>
+                <h1 class="display-4 text-primary">Descubra Dublin</h1>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <img class="img-fluid mb-4" src="img/local/foto-1.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/local/foto-2.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/local/foto-3.jpg" alt="">
+                </div>
+                <div class="col-md">
+                    <img class="img-fluid mb-4" src="img/local/foto-4.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/local/foto-5.jpg" alt="">
+                </div>
+                <div class="col-md">
+                    <img class="img-fluid mb-4" src="img/local/foto-6.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/local/foto-7.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Eventos -->
+        
+        <section class="container text-center">
+            <div class="my-5">
+                <span class="h6 d-block text-uppercase">Descubra o que acontece na cidade</span>
+                <h1 class="display-4 text-primary">Próximos eventos</h1>
+                <table class="table table-hover table-responsive-md my-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Evento</th>
+                            <th scope="col">Local</th>
+                            <th scope="col">Ticket</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">23/10</th>
+                            <td>Julian Backer</td>
+                            <td>The Academy</td>
+                            <td><a href="#" class="btn btn-outline-secondary btn-sm">Comprar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">23/10</th>
+                            <td>Julian Backer</td>
+                            <td>The Academy</td>
+                            <td><a href="#" class="btn btn-outline-secondary btn-sm">Comprar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">23/10</th>
+                            <td>Julian Backer</td>
+                            <td>The Academy</td>
+                            <td><a href="#" class="btn btn-outline-secondary btn-sm">Comprar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        
+        <footer class="bg-dark text-white">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-3 col-6 mb-3">
+                        <h4 class="h6 text-uppercase">Páginas</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="planos.html">Planos</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="inscricao.html">Inscreva-se</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <h4 class="h6 text-uppercase">Locais</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="local.html">Califórnia</a></li>
+                            <li><a href="local.html">Londres</a></li>
+                            <li><a href="local.html">Dubln</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <h4 class="h6 text-uppercase">Dados de contato</h4>
+                        <ul class="list-unstyled text-secondary"><!-- Text-seconday deixa de cor cinza -->
+                            <li>napoli@gmail.com</li>
+                            <li>21 9922-4466</li>
+                            <li>De seg. à sex. das 9h às 18:30h</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4 class="h6 text-uppercase">Redes Sociais</h4>
+                        <ul class="list-unstyled redes-sociais">
+                            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">Facebook</a></li><!-- btn-block faz o botão ficar com display block -->
+                            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">Twitter</a></li>
+                            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-primary text-center py-3">
+                <p class="mb-0">napoli &copy; 2017. Alguns direitos reservados</p>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
