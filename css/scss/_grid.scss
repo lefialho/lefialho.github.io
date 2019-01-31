@@ -1,0 +1,172 @@
+// Variables grid 
+$cols: 12;
+$gutter: 30px;
+$m-device: 1200px;
+$s-device: 768px;
+$x-device: 480px;
+
+/*Box-sizing*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+//Mixin flexbox
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+//Mixin media-query
+@mixin d($size){
+
+  @if $size == m {
+    @media screen and (max-width: #{$m-device}) {
+      @content;
+    }
+  }
+  @else if $size == s {
+    @media screen and (max-width: #{$s-device}) {
+      @content;
+    }
+  }
+  @else if $size == x {
+    @media screen and (max-width: #{$x-device}) {
+      @content;
+    }
+  }
+}
+
+//Grid function
+@function grid($col, $offset: false){
+  $width: 100 / $cols * $col + %; 
+  $result: calc(#{$width} - #{$gutter});
+  @if $offset == offset{
+    $gutter: $gutter / 2;
+    $result: calc(#{$width} + #{$gutter});
+  }
+  @return $result;
+}
+
+/*Grid generator*/
+@for $i from 1 through $cols {
+  .flex-grid-#{$i} {
+    @include flex(0 0 grid($i));
+    width: grid($i);
+    max-width: 100%;
+  }
+}
+
+// Mixin clearfix
+@mixin clearfix{
+  &::after, &::before{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Mixin grid extructure for all devices
+@mixin grid-structure {
+  min-height: 1px;
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  
+  @include d(x){
+    width: 100%;
+    flex: 1 1 100%;
+//    margin-left: 0px;
+//    margin-right: 0px;
+  }
+}
+
+/*Grid extructure*/
+[class^="flex-grid"]{
+  @include grid-structure;
+
+}
+
+/* classes Offset */ 
+@for $i from 1 through $cols {
+  .offset-#{$i} {
+    margin-left: grid($i, offset);
+    @extend %offset;
+  }
+}
+
+/* classes Offset-mobile */ 
+@include d(s){
+  %offset {
+    margin-left: 0px;
+  }
+}
+
+
+// Mixin Container
+@mixin container{
+  margin: 0 auto;
+  width: $m-device;
+  max-width: 100%;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  
+  @include d(m){
+    width: $m-device;
+    max-width: 100%;
+  }
+  
+  @include d(s){
+    width: $s-device;
+    max-width: 100%;
+  }
+  
+  @include d(x){
+    width: $x-device;
+    max-width: 100%;
+  }
+  
+}
+
+/*Container*/
+.container {
+  @include container;
+}
+
+
+// Mixin Rows
+@mixin flex-row{
+  @include flexbox;
+  flex-wrap: wrap;
+  margin-left: -$gutter /2;
+  margin-right: -$gutter /2;
+  
+}
+
+/*Rows*/
+.flex-row{
+  @include flex-row;
+}
+
+
+
+
+
+
