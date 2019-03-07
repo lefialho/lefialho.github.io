@@ -28,10 +28,10 @@ $(document).ready(function(){
 
       $('.portfolio').css('height', 'auto');
       
-      // $('.portfolio h1').css({
-      //   'font-size': '6' + 'rem',
-      //   'line-height': '6' + 'rem'
-      // });
+      $('.portfolio h1').css({
+        'font-size': '5' + 'rem',
+        'line-height': '5' + 'rem'
+      });
 
       $('.portfolio p').css({
         'margin-top': '30' + 'px',
