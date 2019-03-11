@@ -76,6 +76,10 @@ $font-2: 'Taviraj', serif;
     font-size: rem(60);
     line-height: rem(220, 60);
   }
+  @else if $size == 80{
+    font-size: rem(80);
+    line-height: rem(400, 80);
+  }
   @else if $size == 104{
     font-size: rem(104);
     line-height: rem(676, 104);

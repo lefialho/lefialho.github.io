@@ -29,6 +29,7 @@ $(document).ready(function(){
       $('.portfolio').css('height', 'auto');
       
       $('.portfolio h1').css({
+        'margin-top': '30' + 'px',
         'font-size': '5' + 'rem',
         'line-height': '5' + 'rem'
       });
