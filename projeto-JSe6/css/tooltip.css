@@ -1,0 +1,23 @@
+.tooltip {
+  position: absolute;
+  z-index: 550;
+  background: rgba(0, 0, 0, .6);
+  box-shadow: 0 0 0 2px #FB5, 0 0 0 6px rgba(0, 0, 0, .6);
+  padding: .5rem;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  font-size: .875rem;
+  max-width: 180px;
+  border-radius: 2px;
+  opacity: 0;
+}
+
+.tooltip.active {
+  opacity: 1;
+  animation: show-up .5s forwards;
+}
+
+[data-tooltip] {
+  cursor: pointer;
+}
