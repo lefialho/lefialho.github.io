@@ -10,14 +10,13 @@ export default function initModal() {
   if (openButton && closeButton) {
     function openModal(event) {
       event.preventDefault();
-      const target = event.currentTarget.getAttribute('for');
+      const target = event.currentTarget.getAttribute('aria-controls');
       // console.log(target);
       const thisModal = document.querySelectorAll(target);
-      console.log(thisModal)
+      // console.log(thisModal)
       thisModal.forEach((item) => {
         item.classList.add(active)
       })
-
       // thisModal.classList.add(active);
     }
 

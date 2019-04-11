@@ -1,1 +1,2 @@
-export let active = 'active';
+export const active = 'active';
+export const events = ['touchstart', 'click'];

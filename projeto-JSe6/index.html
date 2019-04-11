@@ -15,15 +15,34 @@
 <body>
   <div class="grid-container">
     <nav class="menu" data-menu="smooth">
-      <ul>
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul data-menu="list" id="menu">
         <li><a href="#animais">Animais</a></li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li><a href="empresa.html">A Empresa</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="socios.html">Sócios</a></li>
+            <li><a href="investidores.html">Investidores</a></li>
+          </ul>
+        </li>
+        <li data-dropdown>
+            <a href="sobre.html">Tipos de animais</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">Caninos</a></li>
+              <li><a href="equipe.html">Felinos</a></li>
+              <li><a href="socios.html">Bovinos</a></li>
+              <li><a href="investidores.html">Pássarinhos</a></li>
+            </ul>
+          </li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a for="#login" data-modal="open">Login →</a></li>
+        <li><a aria-controls="#login" data-modal="open">Login →</a></li>
       </ul>
     </nav>
 
-    <section class="grid-section animais" data-anime="scroll" id="animais">
+    <section class="grid-section animais" data-anime="scroll-right" id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
       <ul class="animais-lista" data-tab="menu">
         <li>
@@ -111,9 +130,9 @@
       </div>
     </section>
 
-    <section class="grid-section faq" data-anime="scroll" id="faq">
+    <section class="grid-section faq" data-anime="scroll-down" id="faq">
       <h1 class="titulo">FAQ</h1>
-      <dl class="faq-lista" data-anime="collapse">
+      <dl class="faq-lista" data-anime="accordion">
         <dt>Qual é a idade dos animais?</dt>
         <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quis quidem temporibus vero itaque.</dd>
         <dt>Eles são fantásticos?</dt>
@@ -128,24 +147,47 @@
       </dl>
     </section>
 
-    <section class="grid-section contato" data-anime="scroll" id="contato">
+    <section class="grid-section numbers" data-anime="scroll-right">
+      <h1 class="titulo">Números</h1>
+      <div class="numbers-grid">
+        <div class="number-animal">
+          <h3>Lobos</h3>
+          <span data-number>5088</span>
+        </div>
+        <div class="number-animal">
+          <h3>Raposas</h3>
+          <span data-number>4845</span>
+        </div>
+        <div class="number-animal">
+          <h3>Esquilos</h3>
+          <span data-number>3025</span>
+        </div>
+        <div class="number-animal">
+          <h3>Ursos</h3>
+          <span data-number>557</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-section contato" data-anime="scroll-down" id="contato">
       <h1 class="titulo">Contato</h1>
       <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento">
         <img src="img/mapa.png" alt="">
       </div>
       <ul class="dados">
-        <li for="#login3" data-modal="open">Contato@lefialho.com</li>
+        <li aria-controls="#login3" data-modal="open">Contato@lefialho.com</li>
         <li>+55 (11) 99988-4455</li>
         <li>Rua dos Palmares, 550</li>
         <li data-tooltip aria-label="Capital da cidade louca">São Paulo - SP</li>
       </ul>
     </section>
 
-    <footer class="copy" data-modal="open">
-      <p for="#login2" data-modal="open">Todos os direitos reservados ©copyright</p>
+    <footer class="copy">
+      <p aria-controls="#login2" data-modal="open">Todos os direitos reservados ©copyright</p>
     </footer>
   </div>
-
+  
+  <!-- Modals -->
   <section class="modal-container" data-modal="container" id="login">
     <div class="modal">
       <button data-modal="close" class="close">X</button>
@@ -180,6 +222,8 @@
       </form>
     </div>
   </section>
+
+  <div class="bg-black" data-bgblack></div>
 
   <script type="module" src="js/script.js"></script>
 </body>

@@ -3,7 +3,7 @@ import {
 } from './config.js';
 
 export default function initScrollAnimation() {
-  const sections = document.querySelectorAll('[data-anime="scroll"]');
+  const sections = document.querySelectorAll('[data-anime^="scroll"]');
 
   if (sections.length) {
     const halfWindow = window.innerHeight * 0.6;
@@ -13,9 +13,10 @@ export default function initScrollAnimation() {
         const sectionTop = section.getBoundingClientRect().top;
         const isSectionVisible = (sectionTop - halfWindow) < 0;
 
-        if (isSectionVisible)
+        if (isSectionVisible) {
           section.classList.add(active);
-        else
+        }
+        else if (section.classList.contains(active))
           section.classList.remove(active);
       })
     }
