@@ -8,6 +8,7 @@ import initDropDown from './modules/dropdown.js';
 import initAccordion from './modules/accordion.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initAnimaNumbers from './modules/anima-numbers.js';
+import initHours from './modules/hours.js';
 
 initSmoothScroll();
 initScrollAnimation();
@@ -19,6 +20,7 @@ initTooltip();
 initDropDown();
 initMenuMobile();
 initAnimaNumbers();
+initHours();
 
 
 
