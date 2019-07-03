@@ -27,11 +27,13 @@
     }
 
     &__nav {
-      overflow-y: auto;
-      overflow-x: hidden;
       position: sticky;
       top: 2rem;
       z-index: 9999;
+
+      ul {
+        overflow-y: auto;
+      }
 
       li {
         border-bottom: 1px solid $gray;
