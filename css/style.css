@@ -450,43 +450,47 @@ h2::before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-eye:before {
+.icon-components::before {
+  content: url(../img/icon-components.svg);
+}
+
+.icon-eye::before {
   content: "\e906";
 }
 
-.icon-behance:before {
+.icon-behance::before {
   content: "\e901";
 }
 
-.icon-brand:before {
+.icon-brand::before {
   content: "\e901";
 }
 
-.icon-social:before {
+.icon-social::before {
   content: "\e901";
 }
 
-.icon-arrow-up:before {
+.icon-arrow-up::before {
   content: "\e908";
 }
 
-.icon-arrow-down:before {
+.icon-arrow-down::before {
   content: "\e905";
 }
 
-.icon-linkedin:before {
+.icon-linkedin::before {
   content: "\e903";
 }
 
-.icon-codepen:before {
+.icon-codepen::before {
   content: "\e902";
 }
 
-.icon-github-alt:before {
+.icon-github-alt::before {
   content: "\e900";
 }
 
-.icon-circle-thin:before {
+.icon-circle-thin::before {
   content: "\e904";
 }
 
@@ -803,12 +807,15 @@ header .icon-scroll .icon-arrow-down {
 }
 
 .socials a span {
-  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
   border-radius: 50%;
   padding: 7px;
   color: #252525;
   transition: .3s ease;
+  margin-left: 15px;
 }
 
 .socials a span:hover {
@@ -1063,7 +1070,9 @@ header .icon-scroll .icon-arrow-down {
   }
 }
 
-.main .work-item .info h4, .main .work-item .info p, .main .work-item .info ul {
+.main .work-item .info h4,
+.main .work-item .info p,
+.main .work-item .info ul {
   color: #969696;
 }
 
@@ -1368,7 +1377,8 @@ header .icon-scroll .icon-arrow-down {
   }
 }
 
-.main #about ul, .main #about p {
+.main #about ul,
+.main #about p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1rem;

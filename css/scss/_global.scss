@@ -200,33 +200,36 @@ h2{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-eye:before {
+.icon-components::before {
+  content: url(../img/icon-components.svg);
+}
+.icon-eye::before {
   content: "\e906";
 }
-.icon-behance:before {
+.icon-behance::before {
   content: "\e901";
 }
-.icon-brand:before {
+.icon-brand::before {
   content: "\e901";
 }
-.icon-social:before {
+.icon-social::before {
   content: "\e901";
 }
-.icon-arrow-up:before {
+.icon-arrow-up::before {
   content: "\e908";
 }
-.icon-arrow-down:before {
+.icon-arrow-down::before {
   content: "\e905";
 }
-.icon-linkedin:before {
+.icon-linkedin::before {
   content: "\e903";
 }
-.icon-codepen:before {
+.icon-codepen::before {
   content: "\e902";
 }
-.icon-github-alt:before {
+.icon-github-alt::before {
   content: "\e900";
 }
-.icon-circle-thin:before {
+.icon-circle-thin::before {
   content: "\e904";
 }

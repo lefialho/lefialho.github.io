@@ -1,6 +1,6 @@
 /*header*/
 
-header{
+header {
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
   color: $color-3;
@@ -11,32 +11,32 @@ header{
   right: 0;
   z-index: 1;
 
-  @include d(m){
+  @include d(m) {
     height: 100%;
     position: relative;
   }
 
-  @include d(s){
+  @include d(s) {
     height: 100%;
     position: relative;
   }
 
-  a{
+  a {
     color: $color-3;
   }
 
-  .icon-scroll{
+  .icon-scroll {
     position: absolute;
     bottom: 0;
     left: calc(50% - 16px);
     text-align: center;
 
-    span:first-child{
+    span:first-child {
       font-family: 'Ubuntu', sans-serif;
       font-size: 0.8125rem;
     }
 
-    .icon-arrow-down{
+    .icon-arrow-down {
       display: block;
       color: $color-4;
       font-size: 2rem;
@@ -49,36 +49,40 @@ header{
       0% {
         -webkit-transform: translateY(0%);
       }
-      25%{
+
+      25% {
         -webkit-transform: translateY(25%);
       }
+
       50% {
         -webkit-transform: translateY(0%);
-      }   
-      75%{
+      }
+
+      75% {
         -webkit-transform: translateY(25%);
       }
-      100%{
+
+      100% {
         -webkit-transform: translateY(0%);
       }
     }
   }
 }
 
-.bg-black{
+.bg-black {
   position: absolute;
-  background: linear-gradient(0deg, rgba(0,0,0,1),rgba(176,136,56,0.1));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(176, 136, 56, 0.1));
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: 2;
 
-  @include d(m){
+  @include d(m) {
     height: 100%;
   }
 
-  @include d(s){
+  @include d(s) {
     height: 100%;
   }
 }
@@ -93,11 +97,11 @@ header{
   background: transparent;
   z-index: 3;
 
-  @include d(m){
+  @include d(m) {
     padding: 150px 70px;
   }
 
-  @include d(s){
+  @include d(s) {
     padding: 150px 0px;
   }
 
@@ -127,32 +131,31 @@ header{
       border-right: 1px solid $color-4;
     }
 
-    @include d(m){
+    @include d(m) {
       width: 50px;
       height: 50px;
     }
 
-    @include d(x){
+    @include d(x) {
       width: 30px;
       height: 30px;
     }
   }
 }
 
-.logo{
-
+.logo {
   position: absolute;
   top: 0;
   left: calc(50% - 90px);
 }
 
 /* Portfolio */
-.portfolio{
+.portfolio {
   @include flexbox;
   flex-direction: column;
   justify-content: space-between;
 
-  @include d(x){
+  @include d(x) {
     min-height: 1px;
   }
 
@@ -162,47 +165,48 @@ header{
     align-items: center;
   }
 
-  h1{
+  h1 {
     @include type-2(104);
     color: $color-3;
-    
 
-    @include d(s){
+
+    @include d(s) {
       @include type-2(60);
       line-height: 3.75rem;
     }
 
-    @include d(x){
+    @include d(x) {
       font-size: 1.875rem !important;
       line-height: 1.16667rem;
       margin-top: 0 !important;
 
-      br{
+      br {
         display: none;
       }
-      span{
+
+      span {
         display: none;
       }
     }
   }
 
-  p{
+  p {
 
     @include type-2(18);
     font-style: italic;
 
-    @include d(s){
+    @include d(s) {
       @include type-2(16);
     }
 
-    @include d(x){
+    @include d(x) {
       @include type-2(16);
       margin: 50px 0 30px;
     }
 
   }
 
-  a.btn-about{
+  a.btn-about {
     @include type-1(18);
     display: block;
     color: $color-3;
@@ -213,15 +217,15 @@ header{
     transition: .3s ease;
     text-transform: uppercase;
 
-    &:hover{
+    &:hover {
       background: $color-4;
     }
 
-    @include d(s){
+    @include d(s) {
       @include type-1(16);
     }
 
-    @include d(x){
+    @include d(x) {
       @include type-1(16);
       padding: 5px;
       max-width: 200px;
@@ -232,53 +236,59 @@ header{
 }
 
 /* Socials */
-.socials{
+.socials {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 60px;
 
-  @include d(m){
+  @include d(m) {
     margin-top: 30px;
     padding-right: 0;
   }
 
-  @include d(x){
+  @include d(x) {
     padding: 0;
     margin-top: 15px;
     margin-bottom: 15px;
   }
 
-  a{
+  a {
     padding: 5px 15px;
-    span{
-      content: '';
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: $color-3;
       border-radius: 50%;
       padding: 7px;
       color: $color-1;
       transition: .3s ease;
-      &:hover{
+      margin-left: 15px;
+
+      &:hover {
         background: $color-4;
       }
     }
 
-    @include d(s){
+    @include d(s) {
       padding: 8px;
-      span{
+
+      span {
         padding: 5px;
         font-size: 0.875rem;
       }
     }
   }
 
-  li:last-child a{
+  li:last-child a {
     padding-right: 0;
   }
 
 }
 
 /* Navigation */
-.navigation{
+.navigation {
   @include flexbox;
   justify-content: space-between;
   align-items: flex-end;
@@ -288,7 +298,8 @@ header{
   li {
     position: relative;
     margin-bottom: 60px;
-    &:after{
+
+    &:after {
       display: block;
       content: '';
       width: 1px;
@@ -300,25 +311,25 @@ header{
     }
   }
 
-  a{
+  a {
     @include type-1(18);
     text-transform: uppercase;
     transition: .3s ease;
 
-    &:hover{
+    &:hover {
       color: $color-4;
     }
 
-    span{
+    span {
       color: $color-4;
       margin-left: 15px;
     }
 
-    @include d(s){
+    @include d(s) {
       font-size: 0.875rem;
     }
 
-    @include d(x){
+    @include d(x) {
       font-weight: 700;
     }
   }
@@ -326,36 +337,36 @@ header{
 
 /* Main */
 
-.main{
+.main {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 4;
-  background: $color-8; 
+  background: $color-8;
 
 
-  @include d(m){
+  @include d(m) {
     top: initial;
     outline: 0;
   }
 
-  @include d(s){
+  @include d(s) {
     top: auto;
     z-index: 0;
     position: relative;
 
-    [class^="flex-grid"]{
+    [class^="flex-grid"] {
       width: 100%;
       flex: 1 1 100%;
     }
   }
 
-  section{
+  section {
     padding-top: 100px;
     padding-bottom: 100px;
 
-    @include d(s){
+    @include d(s) {
       padding-top: 30px;
       padding-bottom: 30px;
     }
@@ -363,10 +374,10 @@ header{
   }
 
   /* work-item */
-  .work-item{
+  .work-item {
     margin-bottom: 60px;
 
-    h3{
+    h3 {
       @include flex (1 1 100%);
       @include type-1(24);
       font-size: 1.3rem;
@@ -381,25 +392,27 @@ header{
       position: relative;
       z-index: 5;
 
-      &::before, &::after{
+      &::before,
+      &::after {
         content: '';
         height: 1px;
         @include flex(1 1 10%);
         background: currentColor;
-        @include d(x){
+
+        @include d(x) {
           display: none;
         }
       }
 
-      &:before{
+      &:before {
         margin-right: 15px;
       }
 
-      &:after{
+      &:after {
         margin-left: 15px;
       }
 
-      @include d(m){
+      @include d(m) {
         font-size: 1.125rem;
         padding: 15px;
       }
@@ -407,10 +420,10 @@ header{
     }
 
     a {
-      & .photo{
+      & .photo {
         position: relative;
 
-        & .photo-effect{
+        & .photo-effect {
           @include flexbox;
           justify-content: center;
           align-items: center;
@@ -420,11 +433,11 @@ header{
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 0 , 0 , .0);
+          background: rgba(0, 0, 0, .0);
           transition: .3s;
           opacity: 0;
 
-          span.icon-eye{
+          span.icon-eye {
             font-size: 2.5rem;
           }
 
@@ -432,17 +445,17 @@ header{
 
       }
 
-      &:hover .photo .photo-effect{
+      &:hover .photo .photo-effect {
         @include type-1(18);
         color: $color-3;
-        background: rgba(0, 0 , 0 , .8);
+        background: rgba(0, 0, 0, .8);
         top: 0;
-        opacity: 1; 
-      }  
+        opacity: 1;
+      }
 
     }
 
-    .info{
+    .info {
       @include flexbox;
       flex-direction: column;
       @include type-1(16);
@@ -453,41 +466,43 @@ header{
       min-height: 400px;
       justify-content: space-between;
 
-      @include d(m){
+      @include d(m) {
         min-height: 446px;
       }
 
-      h4, p, ul {
+      h4,
+      p,
+      ul {
         color: $color-9;
       }
 
-      h4{
+      h4 {
         @include type-1(18);
         text-transform: uppercase;
         font-weight: 700;
         margin-top: 30px;
         margin-bottom: 10px;
 
-        @include d(m){
+        @include d(m) {
           @include type-1(16);
           font-weight: 700;
         }
 
       }
 
-      ul{
+      ul {
         @include flexbox;
         flex-wrap: wrap;
 
-        @include d(x){
+        @include d(x) {
           flex-direction: column;
         }
 
-        li{
+        li {
           margin-left: 15px;
         }
 
-        li::before{
+        li::before {
           content: '';
           display: inline-block;
           border-radius: 50%;
@@ -498,32 +513,34 @@ header{
 
       }
 
-      .btn-site{
+      .btn-site {
         @include btn-site;
       }
 
     }
 
-  } /* work-item */
+  }
+
+  /* work-item */
 
 
 
   /* Web */
 
-  #web{
+  #web {
     outline: 1px solid $color-6;
     outline-offset: -30px;
     padding-left: 60px;
     padding-right: 60px;
 
-    @include d(m){
+    @include d(m) {
       outline: 0;
     }
 
-    @include d(s){
-     
+    @include d(s) {
 
-      .flex-grid-6{
+
+      .flex-grid-6 {
         @include flex (1 1 100%);
         width: 100%;
         max-width: 100%;
@@ -531,15 +548,15 @@ header{
 
     }
 
-    @include d(s){
+    @include d(s) {
       padding-left: 15px;
       padding-right: 15px;
     }
 
-    h2{
+    h2 {
       color: $color-2;
 
-      &::before{
+      &::before {
         color: $color-4;
         margin: 0 auto 30px;
       }
@@ -548,22 +565,22 @@ header{
 
     }
 
-    h3{
-      background: $color-11; 
+    h3 {
+      background: $color-11;
       color: $color-7;
     }
 
-    .info{
+    .info {
       outline: 1px solid $color-4;
 
-      li::before{
+      li::before {
         background: $color-4;
       }
 
-      .btn-site{
+      .btn-site {
         color: $color-4;
 
-        &:hover{
+        &:hover {
           background: $color-4;
           color: $color-3;
           border-color: $color-4;
@@ -578,24 +595,24 @@ header{
 
   /* Design */
 
-  #id-visual{
+  #id-visual {
     background: $color-2;
     padding-left: 60px;
     padding-right: 60px;
 
-    @include d(m){
-      .flex-grid-4{
+    @include d(m) {
+      .flex-grid-4 {
         @include flex (0 0 calc(50% - 30px));
         width: calc(50% - 30px);
         max-width: 100%;
       }
     }
 
-    @include d(s){
+    @include d(s) {
       padding-left: 15px;
       padding-right: 15px;
 
-      .flex-grid-4{
+      .flex-grid-4 {
         @include flex (1 1 100%);
         width: 100%;
         max-width: 100%;
@@ -603,10 +620,10 @@ header{
 
     }
 
-    h2{
+    h2 {
       color: $color-5;
 
-      &::before{
+      &::before {
         color: $color-9;
         margin: 0 auto 30px;
       }
@@ -615,28 +632,29 @@ header{
 
     }
 
-    h3{
-      background: $color-9; 
+    h3 {
+      background: $color-9;
       color: $color-10;
       font-size: 1rem;
 
-      &::before, &::after{
+      &::before,
+      &::after {
         @include flex(1 1 9%);
       }
 
     }
 
-    .info{
+    .info {
       outline: 1px solid $color-5;
 
-      li::before{
+      li::before {
         background: $color-5;
       }
 
-      .btn-site{
+      .btn-site {
         color: $color-5;
 
-        &:hover{
+        &:hover {
           background: $color-5;
           color: $color-3;
           border-color: $color-5;
@@ -646,45 +664,47 @@ header{
 
     }
 
-  }/* Design */
+  }
+
+  /* Design */
 
 
   /* About */
 
-  #about{ 
+  #about {
 
     outline: 1px solid $color-6;
     outline-offset: -30px;
 
-    @include d(m){
+    @include d(m) {
       outline: 0;
     }
 
-    h2{
+    h2 {
       text-align: left;
 
-      &:before{
+      &:before {
         margin-bottom: 30px;
         color: $color-4;
       }
 
 
-      @include d(s){
+      @include d(s) {
         text-align: center;
 
-        &:before{
+        &:before {
           margin: 0 auto 15px;
         }
 
       }
     }
 
-    .flex-about{
+    .flex-about {
       display: flex;
       justify-content: center;
     }
 
-    .img-about{
+    .img-about {
       background: url('../img/eu.jpg') no-repeat;
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -694,13 +714,13 @@ header{
       width: 370px;
       height: 370px;
 
-      @include d(m){
+      @include d(m) {
         background: url('../img/eu.jpg') no-repeat;
         width: 350px;
         height: 350px;
       }
 
-      @include d(s){
+      @include d(s) {
         background: url('../img/eu-mobile.jpg') no-repeat;
         width: 230px;
         height: 230px;
@@ -708,12 +728,13 @@ header{
       }
     }
 
-    ul, p{
+    ul,
+    p {
       @include type-1(16);
       margin-bottom: 30px;
     }
 
-    p{
+    p {
       &.first-letter::first-letter {
         font-weight: normal;
         float: left;
@@ -723,23 +744,23 @@ header{
         margin-top: .2em;
       }
 
-      a{
-        color: $color-4;  
+      a {
+        color: $color-4;
         transition: .3s;
         font-weight: 700;
 
-        &:hover{
-          color: $color-7;  
+        &:hover {
+          color: $color-7;
         }
 
       }
 
     }
 
-    h3{
+    h3 {
       margin-bottom: 15px;
 
-      &::before{
+      &::before {
         content: '';
         display: block;
         background: $color-4;
@@ -750,7 +771,7 @@ header{
 
     }
 
-    li::before{
+    li::before {
       content: '';
       display: inline-block;
       background: $color-4;
@@ -760,23 +781,26 @@ header{
       margin-right: 10px;
     }
 
-  }/* About */
+  }
+
+  /* About */
 
   /* Footer */
 
-  footer{
+  footer {
     @include type-1(18);
     background: $color-2;
     color: $color-9;
     padding: 100px 60px;
-    @include d(s){
+
+    @include d(s) {
       padding: 30px 15px 30px 15px;
     }
 
-    h2{
+    h2 {
       color: $color-4;
 
-      &:before{
+      &:before {
         margin: 0 auto 30px;
         color: $color-9;
       }
@@ -784,12 +808,12 @@ header{
       @include spacer;
     }
 
-    h3{
+    h3 {
       @include flexbox;
       align-items: center;
       margin-bottom: 15px;
 
-      &::before{
+      &::before {
         content: '';
         background: $color-9;
         display: inline-block;
@@ -797,7 +821,7 @@ header{
         height: 1px;
         margin-right: 15px;
 
-        @include d(s){
+        @include d(s) {
           background: $color-4;
         }
 
@@ -805,40 +829,40 @@ header{
 
     }
 
-    ul{
+    ul {
       margin-bottom: 30px;
 
-      li{
+      li {
         margin-bottom: 5px;
 
-        span{
+        span {
           font-weight: 700;
           margin-right: 15px;
         }
       }
 
-      &.socials{
+      &.socials {
         justify-content: flex-start;
         margin-bottom: 0px;
 
-        a{
+        a {
           padding: 5px 10px;
 
-          &:first-child{
+          &:first-child {
             padding-left: 0px;
           }
 
-          span{
+          span {
             font-weight: 400;
             background: $color-9;
 
-            &:hover{
+            &:hover {
               background: $color-4;
             }
 
           }
 
-        }  
+        }
 
       }
 
@@ -846,9 +870,6 @@ header{
 
   }
 
-} /* Main */
+}
 
-
-
-
-
+/* Main */
