@@ -816,6 +816,7 @@ header .icon-scroll .icon-arrow-down {
   color: #252525;
   transition: .3s ease;
   margin-left: 15px;
+  width: 30px;
 }
 
 .socials a span:hover {
