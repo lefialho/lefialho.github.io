@@ -2,12 +2,12 @@
   position: relative;
 }
 
-[data-dropdown="menu-content"] {
+[data-dropdown="content"] {
   display: none;
   opacity: 0;
 }
 
-[data-dropdown="menu-content"].active{
+[data-dropdown="content"].active{
   display: block;
   animation: show-up .3s forwards;
 }

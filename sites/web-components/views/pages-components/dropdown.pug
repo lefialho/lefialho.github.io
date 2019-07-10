@@ -22,16 +22,16 @@ block content
 
     .main-content
       h1.main-content__title Dropdown Menu-mobile
-      p.main-content__text.moldure Acrescentar um <b>data-menu="button", aria-expanded="false" e um aria-controls="menu"</b> no botão menu-mobile. Colocar também um <b>data-dropdown</b> nos elementos que pai que contém o menu dropdown e <b> um data-bgBlack"</b> no elemento que fará a tela escurecer. Esse elemento, deve ser o último da página conter a classe <b>bg-black</b>.
+      p.main-content__text.moldure Acrescentar um <b>data-menu="button"</b> e um <b>aria-expanded="false"</b> no botão menu-mobile. Colocar também um <b>data-dropdown="link"</b> nos elementos que irão ativar o menu drop down e um <b>data-dropdown="content"</b> nos menus dropdown. Colocar ainda um <b>data-bgBlack"</b> no elemento que fará a tela escurecer quando o menu for mobile. Esse elemento, deve ser o último da página e conter a classe <b>bg-black</b>.
 
       <nav class="menu">
-      <button class="menu-button" data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <button class="menu-button" data-menu="button" aria-expanded="false">Menu</button>
         <ul class="menu-list" data-menu="list" id="menu">
           <li><a href="">Home</a></li>
 
           <li class="drop-down" data-dropdown>
             <a class="drop-down__link noHover" href="sobre.html" data-dropdown="link">Sobre</a>
-            <ul class="dropdown-menu" data-dropdown="menu-content">
+            <ul class="dropdown-menu" data-dropdown="content">
               <li><a href="empresa.html">A Empresa</a></li>
               <li><a href="http://leandrofialho.com/">Equipe</a></li>
               <li><a href="socios.html">Sócios</a></li>
@@ -41,7 +41,7 @@ block content
 
           <li class="drop-down" data-dropdown>
             <a class="drop-down__link" href="sobre.html" data-dropdown="link">Tipos de negócios</a>
-            <ul class="dropdown-menu" data-dropdown="menu-content">
+            <ul class="dropdown-menu" data-dropdown="content">
               <li><a href="">Negócios 01</a></li>
               <li><a href="">Negócios 02</a></li>
               <li><a href="">Negócios 03</a></li>
@@ -54,7 +54,7 @@ block content
           <li><a aria-controls="#login" data-modal="open">Login →</a></li>
         </ul>
       </nav>
-    
+
       .block-code
         h2.main-content__subtitle HTML Code
         .code
@@ -62,31 +62,31 @@ block content
             img(src="../img/clippy.svg" alt="Copy Simbol")
           pre
             code(id="html-code")
-              |   &lt;nav class=&quot;menu&quot;&gt;
-              |   &lt;button class=&quot;menu-button&quot; data-menu=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;menu&quot;&gt;Menu&lt;/button&gt;
-              |
+              | &lt;nav class=&quot;menu&quot;&gt;
+              |   &lt;button class=&quot;menu-button&quot; data-menu=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Menu&lt;/button&gt;
               |   &lt;ul class=&quot;menu-list&quot; data-menu=&quot;list&quot; id=&quot;menu&quot;&gt;
               |     &lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+
               |     &lt;li class=&quot;drop-down&quot; data-dropdown&gt;
-              |       &lt;a class=&quot;drop-down__link&quot; href=&quot;sobre.html&quot;&gt;Sobre&lt;/a&gt;
-              |       &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              |       &lt;a class=&quot;drop-down__link noHover&quot; href=&quot;sobre.html&quot; data-dropdown=&quot;link&quot;&gt;Sobre&lt;/a&gt;
+              |       &lt;ul class=&quot;dropdown-menu&quot; data-dropdown=&quot;content&quot;&gt;
               |         &lt;li&gt;&lt;a href=&quot;empresa.html&quot;&gt;A Empresa&lt;/a&gt;&lt;/li&gt;
-              |         &lt;li&gt;&lt;a href=&quot;equipe.html&quot;&gt;Equipe&lt;/a&gt;&lt;/li&gt;
+              |         &lt;li&gt;&lt;a href=&quot;http://leandrofialho.com/&quot;&gt;Equipe&lt;/a&gt;&lt;/li&gt;
               |         &lt;li&gt;&lt;a href=&quot;socios.html&quot;&gt;Sócios&lt;/a&gt;&lt;/li&gt;
               |         &lt;li&gt;&lt;a href=&quot;investidores.html&quot;&gt;Investidores&lt;/a&gt;&lt;/li&gt;
               |       &lt;/ul&gt;
               |     &lt;/li&gt;
-              |
+
               |     &lt;li class=&quot;drop-down&quot; data-dropdown&gt;
-              |       &lt;a class=&quot;drop-down__link&quot; href=&quot;sobre.html&quot;&gt;Tipos de negócios&lt;/a&gt;
-              |       &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              |       &lt;a class=&quot;drop-down__link&quot; href=&quot;sobre.html&quot; data-dropdown=&quot;link&quot;&gt;Tipos de negócios&lt;/a&gt;
+              |       &lt;ul class=&quot;dropdown-menu&quot; data-dropdown=&quot;content&quot;&gt;
               |         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 01&lt;/a&gt;&lt;/li&gt;
               |         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 02&lt;/a&gt;&lt;/li&gt;
               |         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 03&lt;/a&gt;&lt;/li&gt;
               |         &lt;li&gt;&lt;a href=&quot;&quot;&gt;Negócios 04&lt;/a&gt;&lt;/li&gt;
               |       &lt;/ul&gt;
               |     &lt;/li&gt;
-              |
+
               |     &lt;li&gt;&lt;a href=&quot;&quot;&gt;Faq&lt;/a&gt;&lt;/li&gt;
               |     &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
               |     &lt;li&gt;&lt;a aria-controls=&quot;#login&quot; data-modal=&quot;open&quot;&gt;Login →&lt;/a&gt;&lt;/li&gt;

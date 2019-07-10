@@ -1,6 +1,6 @@
 function dropdown() {
   const dropdownMenus = document.querySelectorAll('[data-dropdown="link"]');
-  const dropdownMenusContent = document.querySelectorAll('[data-dropdown="menu-content"]');
+  const dropdownMenusContent = document.querySelectorAll('[data-dropdown="content"]');
   const events = ['click'];
 
   if (dropdownMenus) {
