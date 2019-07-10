@@ -6,6 +6,7 @@ function popOver() {
     function handleClick(event) {
       event.preventDefault()
       this.classList.toggle('active');
+      
       outSideClick(this, events, () => {
         this.classList.remove('active');
       });

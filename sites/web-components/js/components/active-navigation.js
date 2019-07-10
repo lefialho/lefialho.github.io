@@ -22,7 +22,6 @@ function activateNavigation() {
 
 		function activeScroll() {
 			contents.forEach((content) => {
-				const navHeight = activateNav.clientHeight;
 				const contentStart = content.getBoundingClientRect().top - parseInt(window.getComputedStyle(content).getPropertyValue('margin-top'));
 				const contentMarginTop = content.offsetHeight ;
 				const contentEnd = contentStart + contentMarginTop;
@@ -39,7 +38,7 @@ function activateNavigation() {
 			})
 		}
 
-		const selectLinks = document.querySelectorAll('[data-menu="link"]');
+		const selectLinks = document.querySelectorAll('[data-menu="activeLink"]');
     
 		selectLinks.forEach((link) => {
 			link.addEventListener('click', activeLinks);

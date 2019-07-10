@@ -1,3 +1,7 @@
+.home {
+  background: url(../../img/Square-Versatiles.svg);
+}
+
 .main-home {
   display: flex;
   align-items: center;
@@ -7,17 +11,16 @@
   margin: 3rem;
   padding: 2rem;
   text-align: center;
-  background-color: white;
 
   &__title {
     margin-bottom: 2rem;
     font-size: 4rem;
-    color: $darkGray;
+    color: $darkBlue;
     
     &::after {
       content: '';
       display: block;
-      background-color: #706F6F;
+      background-color: $darkBlue;
       width: 5%;
       height: 1px;
       margin: 2rem auto 0;
@@ -41,6 +44,7 @@
       padding: 4rem;
       @include transition;
       margin-bottom: 2rem;
+      background-color: white;
 
       &:hover {
         background-color: $ultraLightGray;
@@ -58,7 +62,7 @@
     }
 
     h2 {
-      color: $blue;
+      color: $darkBlue;
       font-size: 2.5rem;
       font-weight: 400;
     }

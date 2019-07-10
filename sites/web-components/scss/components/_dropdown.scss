@@ -2,12 +2,16 @@
   position: relative;
 }
 
-.js [data-dropdown] .dropdown-menu {
+[data-dropdown="menu-content"] {
   display: none;
+  opacity: 0;
 }
 
-[data-dropdown]:hover .dropdown-menu,
-[data-dropdown].active .dropdown-menu {
+[data-dropdown="menu-content"].active{
   display: block;
   animation: show-up .3s forwards;
+}
+
+[data-dropdown="link"].active::after {
+  transform: rotate(180deg);
 }
