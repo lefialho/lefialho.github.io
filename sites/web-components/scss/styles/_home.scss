@@ -1,5 +1,5 @@
 .home {
-  background: url(../../img/Square-Versatiles.svg);
+  background: url(../img/Square-Versatiles.svg);
 }
 
 .main-home {
@@ -15,12 +15,12 @@
   &__title {
     margin-bottom: 2rem;
     font-size: 4rem;
-    color: $darkBlue;
+    color: $darkGray;
     
     &::after {
       content: '';
       display: block;
-      background-color: $darkBlue;
+      background-color: $darkGray;
       width: 5%;
       height: 1px;
       margin: 2rem auto 0;
