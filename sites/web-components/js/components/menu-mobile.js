@@ -1,7 +1,7 @@
-function MenuMobile() {
-  const menuMobileButton = document.querySelector('[data-menu="button"]');
-  const menuList = document.querySelector('[data-menu="list"]');
-  const bgBlack = document.querySelector('[data-bgBlack]');
+(function MenuMobile(win, doc) {
+  const menuMobileButton = doc.querySelector('[data-menu="button"]');
+  const menuList = doc.querySelector('[data-menu="list"]');
+  const bgBlack = doc.querySelector('[data-bgBlack]');
 
   if (menuMobileButton) {
     function openMenu() {
@@ -19,5 +19,4 @@ function MenuMobile() {
     menuMobileButton.addEventListener('click', openMenu)
     bgBlack.addEventListener('click', closeMenu)
   }
-}
-MenuMobile()
+})(window, document);

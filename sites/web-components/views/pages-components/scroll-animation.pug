@@ -24,10 +24,15 @@ block content
       h1.main-content__title Scroll Animation
       p.main-content__text.moldure Acrescentar um <b>data-anime="scroll-fade"</b> ou <b>data-anime="scroll-down"</b> ou <b>data-anime="scroll-right"</b> ou <b>data-anime="scroll-left"</b> ou <b>data-anime="scroll-top"</b> no elemento que vai receber a animação.
 
-      div(class="scroll-block" data-anime="scroll-fade")
-        h2.main-content__subtitle Anime Fade
-        p p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt asperiores cupiditate reprehenderit laboriosam et incidunt minima nisi voluptate ipsum. Rem dolorem sint, molestias facere amet accusantium. Dignissimos, ea at?Asperiores, quis expedita repudiandae, maiores assumenda, neque in dolores necessitatibus blanditiis tenetur quaerat ab officia natus quam voluptatem! Asperiores voluptatibus dolorum beatae debitis eius? Obcaecati aliquam voluptatum totam sit at.Voluptatibus animi reprehenderit eligendi maxime sit doloremque iusto. Facere officiis deserunt odio dignissimos iste eligendi sequi, aperiam consequatur libero, quos impedit. Illum porro nihil beatae eos aut facere, praesentium magnam.Fugit amet fugiat, possimus eveniet soluta necessitatibus dolor ratione a, repellendus deleniti modi praesentium magni at incidunt quia vel blanditiis consequatur molestiae est enim. Nemo voluptates quasi ratione aspernatur doloribus.
-
+      div.grid-container(class="scroll-block")
+        .grid-4(data-anime="scroll-right")
+          h2.main-content__subtitle Anime Right
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt asperiores cupiditate reprehenderit laboriosam et incidunt minima nisi voluptate ipsum. Rem dolorem sint, molestias facere amet accusantium. Dignissimos, ea at?Asperiores, quis expedita repudiandae, maiores assumenda, neque in dolores necessitatibus blanditiis tenetur quaerat ab officia natus quam voluptatem! Asperiores voluptatibus dolorum beatae debitis eius? Obcaecati aliquam voluptatum totam sit at.Voluptatibus animi reprehenderit eligendi maxime sit doloremque iusto. Facere officiis deserunt odio dignissimos iste eligendi sequi, aperiam consequatur libero, quos impedit.
+      
+        .grid-6(data-anime="scroll-left")
+          h2.main-content__subtitle Anime Left
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptas quidem assumenda voluptatum voluptate aperiam quisquam, id illum sed eos cumque tempore pariatur consequatur placeat earum saepe vel esse. Harum.
+          
       div(class="scroll-block" data-anime="scroll-down")
         h2.main-content__subtitle Anime Down
         p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem harum libero temporibus voluptas quibusdam ab architecto possimus error tenetur? Quibusdam sapiente cumque accusantium dolorum explicabo quo similique fugit debitis deserunt.
@@ -35,12 +40,12 @@ block content
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt asperiores cupiditate reprehenderit laboriosam et incidunt minima nisi voluptate ipsum. Rem dolorem sint, molestias facere amet accusantium. Dignissimos, ea at?Asperiores, quis expedita repudiandae, maiores assumenda, neque in dolores necessitatibus blanditiis tenetur quaerat ab officia natus quam voluptatem! Asperiores voluptatibus dolorum beatae debitis eius? Obcaecati aliquam voluptatum totam sit at.Voluptatibus animi reprehenderit eligendi maxime sit doloremque iusto. Facere officiis deserunt odio dignissimos iste eligendi sequi, aperiam consequatur libero, quos impedit. Illum porro nihil beatae eos aut facere, praesentium magnam.Fugit amet fugiat, possimus eveniet soluta necessitatibus dolor ratione a, repellendus deleniti modi praesentium magni at incidunt quia vel blanditiis consequatur molestiae est enim. Nemo voluptates quasi ratione aspernatur doloribus.
 
       div.grid-container(class="scroll-block")
-        .grid-6(data-anime="scroll-right")
-          h2.main-content__subtitle Anime Right
+        .grid-6(data-anime="scroll-fade")
+          h2.main-content__subtitle Anime Fade
           p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ducimus aspernatur et, blanditiis vitae quisquam sapiente, sit at sint quasi ut, libero ea commodi veritatis aliquam numquam quibusdam in non!Nobis tenetur officiis nihil voluptas laborum nam quae in dolor cumque, ut numquam tempore fugiat porro fugit rerum mollitia possimus iste suscipit? Veritatis deserunt voluptatum officiis id voluptatibus quisquam quod.
       
-        .grid-4(data-anime="scroll-left")
-          h2.main-content__subtitle Anime Left
+        .grid-4(data-anime="scroll-zoomIn")
+          h2.main-content__subtitle Anime Zoom-In
           img(src=urlImg + 'hacker.svg', alt="")
       
       div(class="scroll-block" data-anime="scroll-top")

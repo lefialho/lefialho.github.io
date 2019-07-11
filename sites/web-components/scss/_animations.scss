@@ -103,6 +103,17 @@
   }
 }
 
+@keyframes show-zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 @keyframes modal {
   from {
     opacity: 0;
@@ -110,7 +121,7 @@
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0 0)
+    transform: translate3d(0, 0, 0)
   }
 }
 
@@ -119,7 +130,8 @@
 .js [data-anime="scroll-left"],
 .js [data-anime="scroll-right"],
 .js [data-anime="scroll-top"],
-.js [data-anime="scroll-down"] {
+.js [data-anime="scroll-down"],
+.js [data-anime="scroll-zoomIn"] {
   opacity: 0;
 }
 
@@ -146,4 +158,9 @@
 [data-anime="scroll-top"].active {
   opacity: 1;
   animation: show-up-scroll .3s forwards;
+}
+
+[data-anime="scroll-zoomIn"].active {
+  opacity: 1;
+  animation: show-zoomIn .2s forwards;
 }

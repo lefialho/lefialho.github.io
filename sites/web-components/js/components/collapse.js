@@ -1,5 +1,5 @@
-function collapse() {
-  const collapseGroup = document.querySelectorAll('[data-collapseGroup]');
+(function collapse(win, doc) {
+  const collapseGroup = doc.querySelectorAll('[data-collapseGroup]');
 
   collapseGroup.forEach((collapse) => {
     const collapseItem = collapse.querySelectorAll('[data-collapse="title"]');
@@ -18,7 +18,7 @@ function collapse() {
       });
     }
   })
-}
-collapse();
+})(window, document);
+
 
 

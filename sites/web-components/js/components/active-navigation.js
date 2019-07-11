@@ -1,11 +1,11 @@
-function activateNavigation() {
-	const activateNav = document.querySelector('[data-nav="activate-nav"]');
-  const contents = document.querySelectorAll('[data-activate="content"]'); 
+(function activateNavigation(win, doc) {
+	const activateNav = doc.querySelector('[data-nav="activate-nav"]');
+  const contents = doc.querySelectorAll('[data-activate="content"]'); 
 
 	if (contents.length) {
 		contents.forEach((topic) => {
-			const listItems = document.createElement('li');
-			const links = document.createElement('a');
+			const listItems = doc.createElement('li');
+			const links = doc.createElement('a');
 			const contentsId = topic.getAttribute('id');
 			const contentsTitle = topic.getAttribute('title');
 
@@ -17,7 +17,6 @@ function activateNavigation() {
 			activateNav.appendChild(listItems);
 		})
 
-
 		window.addEventListener('scroll', activeScroll);
 
 		function activeScroll() {
@@ -26,7 +25,7 @@ function activateNavigation() {
 				const contentMarginTop = content.offsetHeight ;
 				const contentEnd = contentStart + contentMarginTop;
 				const contentId = content.getAttribute('id');
-				const itemMenu = document.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
+				const itemMenu = doc.querySelector('[data-menu="activeLink"][href="#' + contentId + '"]');
 				
 				console.log()
 
@@ -38,7 +37,7 @@ function activateNavigation() {
 			})
 		}
 
-		const selectLinks = document.querySelectorAll('[data-menu="activeLink"]');
+		const selectLinks = doc.querySelectorAll('[data-menu="activeLink"]');
     
 		selectLinks.forEach((link) => {
 			link.addEventListener('click', activeLinks);
@@ -50,7 +49,6 @@ function activateNavigation() {
 			})
 			this.classList.add('active')
 		}
-
 	}
-}
-activateNavigation();
+})(window, document);
+

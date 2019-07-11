@@ -1,13 +1,13 @@
-function modal() {
-  const openButton = document.querySelectorAll('[data-modal="open"]');
-  const closeButton = document.querySelectorAll('[data-modal="close"]');
-  const containerModal = document.querySelectorAll('[data-modal="container"]');
+(function modal(win, doc) {
+  const openButton = doc.querySelectorAll('[data-modal="open"]');
+  const closeButton = doc.querySelectorAll('[data-modal="close"]');
+  const containerModal = doc.querySelectorAll('[data-modal="container"]');
 
   if (openButton && closeButton) {
     function openModal(event) {
       event.preventDefault();
       const target = event.currentTarget.getAttribute('aria-controls');
-      const thisModal = document.querySelectorAll(target);
+      const thisModal = doc.querySelectorAll(target);
       
       thisModal.forEach((item) => {
         item.classList.add('active')
@@ -37,5 +37,4 @@ function modal() {
       button.addEventListener('click', closeModal)
     })
   }
-}
-modal();
+})(window, document);

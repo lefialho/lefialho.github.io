@@ -1,7 +1,6 @@
-function accordion() {
-
+(function accordion(win, doc) {
   // ------- Accordion next -------
-  const accordionGroup = document.querySelectorAll('[data-accordion="group"]');
+  const accordionGroup = doc.querySelectorAll('[data-accordion="group"]');
 
   if (accordionGroup.length) {
     accordionGroup.forEach((accordion) => {
@@ -29,7 +28,7 @@ function accordion() {
   }
 
   //------ Accordion child -------
-  // const accordionGroupChild = document.querySelectorAll('[data-accordion="group-child"]');
+  // const accordionGroupChild = doc.querySelectorAll('[data-accordion="group-child"]');
 
   // accordionGroupChild.forEach((accordion, index, group) => {
   //   const accordionItem = group[index].querySelectorAll('[data-accordion="title"]');
@@ -55,5 +54,4 @@ function accordion() {
   //     });
   //   }
   // });
-}
-accordion();
+})(window, document);

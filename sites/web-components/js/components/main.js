@@ -1,4 +1,4 @@
-function copy() {
+(function copy(win, doc) {
 	const clipboard = new ClipboardJS('.btn-copy');
 	clipboard.on('success', function (e) {
 		console.info('Action:', e.action);
@@ -11,16 +11,15 @@ function copy() {
 		console.error('Action:', e.action);
 		console.error('Trigger:', e.trigger);
 	});
-}
-copy()
+})(window, document);
 
-function smoothScroll() {
-	const insideLinks = document.querySelectorAll('a[href^="#"]');
+(function smoothScroll(win, doc) {
+	const insideLinks = doc.querySelectorAll('a[href^="#"]');
 
 	function scrollToContent(event) {
 		event.preventDefault();
 		const href = event.currentTarget.getAttribute('href');
-		const content = document.querySelector(href);
+		const content = doc.querySelector(href);
 
 		content.scrollIntoView({
 			behavior: 'smooth',
@@ -30,5 +29,4 @@ function smoothScroll() {
 	insideLinks.forEach((link) => {
 		link.addEventListener('click', scrollToContent);
 	});
-}
-smoothScroll()
+})(window, document);
