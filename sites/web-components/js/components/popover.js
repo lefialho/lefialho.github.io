@@ -1,5 +1,5 @@
-function popOver() {
-  const popovers = document.querySelectorAll('[data-popover]');
+(function popOver(win, doc) {
+  const popovers = doc.querySelectorAll('[data-popover]');
   const events = ['touchstart', 'click'];
 
   if (popovers) {
@@ -40,5 +40,4 @@ function popOver() {
       }
     }
   }
-}
-popOver();
+})(window, document);

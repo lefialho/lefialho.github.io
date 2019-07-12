@@ -1,6 +1,6 @@
-function dropdown() {
-  const dropdownMenus = document.querySelectorAll('[data-dropdown="link"]');
-  const dropdownMenusContent = document.querySelectorAll('[data-dropdown="content"]');
+(function dropdown(win, doc) {
+  const dropdownMenus = doc.querySelectorAll('[data-dropdown="link"]');
+  const dropdownMenusContent = doc.querySelectorAll('[data-dropdown="content"]');
   const events = ['click'];
 
   if (dropdownMenus) {
@@ -21,8 +21,7 @@ function dropdown() {
       });
     });
   }
-}
-dropdown();
+})(window, document);
 
 function outSideClick(element, events, callback) {
   const html = document.documentElement;
