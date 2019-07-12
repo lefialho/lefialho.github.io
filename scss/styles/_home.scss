@@ -83,3 +83,9 @@
     }
   }
 }
+
+@media (max-height: 768px) {
+  .main-home {
+    height: initial;
+  }
+}
