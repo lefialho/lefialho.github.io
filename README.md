@@ -2,18 +2,13 @@
 
 ## Sobre
 
-Esse repositório será utilizado para treinar os recursos aprendidos no mentoria training-center do git hub [mentoria](https://github.com/training-center/mentoria) e também para alocar projetos que possam servir como portfólio.
+Formado em design pela Universidade Federal de Juiz de Fora, atuo como designer de identidade visual e interfaces para web. Além disso, trabalho com desenvolvimento web front-end.
 
-## Objetivos
+## links de projetos
+- [framework de componentes](http://leandrofialho.com/web-components/) - desenvolvido com HTML, CSS e JavaScript, desenvolvi esse framework para facilitar as tarefas do dia a dia de trabalho.
+- [CodePen](https://codepen.io/lefialho/) Alguns estudos no CodePen.
 
-- Utilizar esse repositório como referência para portfólio; 
-- Melhorar o conhecimento para desenvolvimento de sites;
-- Melhorar a concepção de UX design;
-- Melhorar as técnicas de desenvolvimento front-end;
-
-## links
-
-- [Site Pessoal](http://leandrofialho.com/)
+## links redes sociais
 - [Facebook](https://www.facebook.com/Lefialho13)
 - [Twitter](https://twitter.com/LFialho13)
 - [LinkedIn](https://www.linkedin.com/in/leandro-fialho-888666103/)
