@@ -781,6 +781,18 @@ header {
       margin-right: 10px;
     }
 
+    .projects {
+      li {
+        a {
+          text-decoration: underline;
+          &:hover {
+            color: $color-10;
+            @include effect(.3s);
+          }
+        }
+      }
+    }
+
   }
 
   /* About */

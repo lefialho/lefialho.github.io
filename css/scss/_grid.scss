@@ -61,7 +61,7 @@ $x-device: 480px;
 
 //Grid function
 @function grid($col, $offset: false) {
-  $width: 100 / $cols * $col + %;
+  $width: 100 / $cols * $col + 0%;
   $result: calc(#{$width} - #{$gutter});
 
   @if $offset==offset {
