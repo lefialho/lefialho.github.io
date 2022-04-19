@@ -1,19 +1,50 @@
 /*Reset*/
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li, a,form, label, article, aside, figure, figcaption, img, footer, header, hgroup, menu, nav, section, audio, video{
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+a,
+form,
+label,
+article,
+aside,
+figure,
+figcaption,
+img,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+audio,
+video {
   margin: 0;
   padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-a, a:hover{ 
+a,
+a:hover {
   text-decoration: none;
   color: $color-1;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
 }
@@ -21,31 +52,40 @@ img{
 
 /*Global*/
 
-body{
+body {
   color: $color-1;
 }
 
-
-/*Box-sizing*/
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-h2{
+h2 {
   @include type-2(60);
   text-align: center;
   margin-bottom: 60px;
-  
+
   @include spacer;
-  
-  @include d(s){
+
+  @include d(s) {
     font-size: 2.5rem;
     line-height: 2.6rem;
   }
-  
+
 }
 
-.button-scrolltop { 
+.link {
+  color: $color-4;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color-4;
+  }
+}
+
+.button-scrolltop {
   color: $color-5;
   font-size: 1.7rem;
   position: fixed;
@@ -56,8 +96,8 @@ h2{
   transition: .3s;
   z-index: 6;
   cursor: pointer;
-  
-  &:hover{
+
+  &:hover {
     color: $color-4;
   }
 
@@ -88,87 +128,87 @@ h2{
 }
 
 /*Anime Scroll*/
-.js [data-anime]{
+.js [data-anime] {
   opacity: 0;
   transition: .3s;
-  
-  @include d(s){
+
+  @include d(s) {
     opacity: 1;
   }
-  
+
 }
 
-.js [data-anime].animate{
+.js [data-anime].animate {
   opacity: 1;
-  transform: translate3d(0,0,0);   
+  transform: translate3d(0, 0, 0);
 }
 
-.js [data-anime-top]{
+.js [data-anime-top] {
   opacity: 0;
-  transform: translate3d(0,-40px,0);
+  transform: translate3d(0, -40px, 0);
   transition: .3s;
-  
-  @include d(s){
+
+  @include d(s) {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
-  
+
 }
 
-.js [data-anime-top].animate{
+.js [data-anime-top].animate {
   opacity: 1;
-  transform: translate3d(0,0,0);    
+  transform: translate3d(0, 0, 0);
 }
 
-.js [data-anime-bottom]{
+.js [data-anime-bottom] {
   opacity: 0;
-  transform: translate3d(0,40px,0);
+  transform: translate3d(0, 40px, 0);
   transition: .3s;
-  
-  @include d(s){
+
+  @include d(s) {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
-  
+
 }
 
-.js [data-anime-bottom].animate{
+.js [data-anime-bottom].animate {
   opacity: 1;
-  transform: translate3d(0,0,0); 
+  transform: translate3d(0, 0, 0);
 }
 
-.js [data-anime-left]{
+.js [data-anime-left] {
   opacity: 0;
-  transform: translate3d(-40px,0,0);
+  transform: translate3d(-40px, 0, 0);
   transition: .3s;
-  
-  @include d(s){
+
+  @include d(s) {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
-  
+
 }
 
-.js [data-anime-left].animate{
+.js [data-anime-left].animate {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
-.js [data-anime-right]{
+.js [data-anime-right] {
   opacity: 0;
-  transform: translate3d(40px,0,0);
+  transform: translate3d(40px, 0, 0);
   transition: .3s;
-  
-  @include d(s){
+
+  @include d(s) {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
-  
+
 }
 
-.js [data-anime-right].animate{
+.js [data-anime-right].animate {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 
@@ -176,8 +216,8 @@ h2{
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?f9zoao');
-  src:  url('fonts/icomoon.eot?f9zoao#iefix') format('embedded-opentype'),
+  src: url('fonts/icomoon.eot?f9zoao');
+  src: url('fonts/icomoon.eot?f9zoao#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?f9zoao') format('truetype'),
     url('fonts/icomoon.woff?f9zoao') format('woff'),
     url('fonts/icomoon.svg?f9zoao#icomoon') format('svg');
@@ -185,7 +225,8 @@ h2{
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -202,34 +243,45 @@ h2{
 
 .icon-components::before {
   content: url(../img/icon-components.svg);
+  transform: translateY(-2px);
 }
+
 .icon-eye::before {
   content: "\e906";
 }
+
 .icon-behance::before {
   content: "\e901";
 }
+
 .icon-brand::before {
   content: "\e901";
 }
+
 .icon-social::before {
   content: "\e901";
 }
+
 .icon-arrow-up::before {
   content: "\e908";
 }
+
 .icon-arrow-down::before {
   content: "\e905";
 }
+
 .icon-linkedin::before {
   content: "\e903";
 }
+
 .icon-codepen::before {
   content: "\e902";
 }
+
 .icon-github-alt::before {
   content: "\e900";
 }
+
 .icon-circle-thin::before {
   content: "\e904";
 }
