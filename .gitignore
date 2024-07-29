@@ -1,8 +1,5 @@
 # Node.js #
 node_modules
 
-# V�deos #
-src/video
-
 # json #
 package-lock.json
