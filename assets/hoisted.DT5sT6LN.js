@@ -1,0 +1,1 @@
+const t=document.querySelector('[data-btn="btn-navigation"]'),e=document.querySelector('[data-nav="navigation"]'),a=window.matchMedia("(min-width: 1024px)");t.onclick=()=>{t?.classList.toggle("active"),e?.classList.toggle("active")};a.onchange=()=>{t?.classList.remove("active"),e?.classList.remove("active")};
