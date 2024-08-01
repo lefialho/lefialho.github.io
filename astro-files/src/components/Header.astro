@@ -1,0 +1,25 @@
+---
+import Image from "astro/components/Image.astro";
+import logoTipo from "../assets/img/logo.svg"
+import BtnNav from "./BtnNav.astro";
+import Nav from "./Nav.astro";
+---
+
+<header>
+  <!-- <a class="logo" href="./">Leandro Fialho</a> -->
+  <a class="logo" href="/"><Image src={logoTipo} alt="Logotipo"/></a>
+  <Nav />
+  <BtnNav />
+</header>
+
+<style lang="scss">
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 1.25rem;
+    }
+  }
+</style>

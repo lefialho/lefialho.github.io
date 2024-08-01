@@ -1,0 +1,107 @@
+---
+import Title from "../Title.astro";
+import RedesSociais from "../RedesSociais.astro";
+import { Image } from "astro:assets";
+import leandro from "../../assets/img/leandrofialho.png";
+---
+
+<RedesSociais />
+
+<main>
+  <section>
+    <Title text="Sobre" />
+
+    <div class="grid">
+      <Image class="img_leandro" src={leandro} alt="Foto do Leandro Fialho" />
+
+      <div>
+        <div class="block-default" style="margin-top: 2rem;">
+          <h2>Formação:</h2>
+          <p>
+            Graduado no curso de Design pela Universidade Federal de Juiz de
+            Fora (UFJF) 2011-2016.
+          </p>
+        </div>
+
+        <div class="block-default">
+          <h2>Cursos:</h2>
+          <ul class="conhecimentos_lista">
+            <li>Cursos on-line de front-end pela Origamid, Udemy e Rocketseat.</li>
+            <li> Curso técnico de informática pela ETEV em Viçosa-MG.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="block-default">
+        <h2>Conhecimentos em Web:</h2>
+        <ul class="conhecimentos_lista">
+          <li>HTML, CSS, javaScript;</li>
+          <li>React, Vue, Astro build;</li>
+          <li>Tailwind, Bootstrap, SASS;</li>
+          <li>Design responsivo - Flexbox e Grid css;</li>
+          <li>Git e Github;</li>
+          <li>Gerenciador de tarefas - Gulp, Webpack, Vite;</li>
+          <li>Word Press;</li>
+        </ul>
+      </div>
+
+      <div class="block-default">
+        <h2>Conhecimentos em Design:</h2>
+        <ul class="conhecimentos_lista">
+          <li>Criação de interfaces - UI;</li>
+          <li>Planejamento de usabilidade - UX;</li>
+          <li>Criação de Marcas;</li>
+          <li>Identidade Visual;</li>
+          <li>Planejamento / briefing</li>
+          <li>Brainstorming</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+
+    p {
+      max-width: 45ch;
+    }
+  }
+
+  .img_leandro {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: auto;
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .conhecimentos {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_lista {
+      list-style: circle;
+      padding-left: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: auto 1fr;
+      gap: 4rem
+    }
+
+    .img_leandro {
+      max-width: 250px;
+      height: 250px;
+    }
+  }
+</style>
