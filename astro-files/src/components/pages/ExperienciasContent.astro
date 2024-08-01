@@ -1,0 +1,58 @@
+---
+import RedesSociais from "../RedesSociais.astro";
+import Title from "../Title.astro";
+import Accordion from "../accordion/Accordion.astro";
+import AccordionItem from "../accordion/AccordionItem.astro";
+---
+
+<RedesSociais />
+
+<main transition:animate="slide">
+  <div class="content">
+    <Title text="Experiências" />
+
+    <Accordion>
+      <AccordionItem title="ProDoctor" year="2019 - atual" active>
+        <p style="margin-bottom: 1rem;">
+          Participação no desenvolvimento frontend e na criação do design
+          UX/UI, do aplicativo web desktop ProDoctor cloud. 
+        </p>
+
+        <p>
+          Também atuo na criação e manutenção do site e landing pages da empresa.
+        </p>
+      </AccordionItem>
+
+      <AccordionItem title="CAEd" year="2016 - 2019">
+        <p>
+          Desenvolvimento de interfaces e usabilidade de sites UX/UI, codificação frontend, implementação e manutenção em WordPress.
+        </p>
+      </AccordionItem>
+
+      <AccordionItem title="UFJF" year="2011 - 2016">
+        <p>
+          Atuei em projetos e bolsas de estudo de design e programação na UFJF (Universidade Federal de Juiz de Fora).
+        </p>
+      </AccordionItem>
+
+      <AccordionItem title="Microlins e SOS" year="2010 - 2012">
+        <p>
+          Atuei como instrutor de informática (Windows, Excel, Word, Power Point e Internet) e também de webdesign (Dreamweaver, HTML, CSS, Photoshop).
+        </p>
+      </AccordionItem>
+    </Accordion>
+  </div>
+</main>
+
+<style>
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    max-width: 80ch;
+    width: 100%;
+  }
+</style>

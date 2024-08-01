@@ -1,0 +1,45 @@
+---
+interface Props {
+  btnText: string;
+  link?: boolean;
+  href?: string;
+  target?: string;
+}
+
+const { btnText, link, href, target } = Astro.props;
+---
+
+{
+  link ? (
+    <a class="btn" href={href} target={target}>
+      {btnText} <slot />
+    </a>
+  ) : (
+    <button class="btn">
+      {btnText} <slot />
+    </button>
+  )
+}
+
+<style lang="scss" is:global>
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: white;
+    border: 1px solid var(--primary-color-hover);
+    padding: .5rem 1rem;
+    width: max-content;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--primary-color-hover);
+
+      .chevron {
+        animation: anime-chevron .5s ease-in-out alternate infinite forwards;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+import RedesSociais from "../RedesSociais.astro";
+import Title from "../Title.astro";
+import Tabs from "../Tabs.astro";
+import Carousel from "../Carousel.astro";
+import CarouselEmpresasLista from "../carousel/CarouselEmpresasLista.astro";
+import CarouselEstudosLista from "../carousel/CarouselEstudosLista.astro";
+---
+
+<RedesSociais />
+
+<main>
+  <Title text="Projetos" />
+
+  <Tabs>
+    <li class="tab-nav_item is-active" slot="tab-item">
+      <a href="#tab-one">Para Empresas</a>
+    </li>
+    <div
+      class="tab-content is-active"
+      id="tab-one"
+      data-tab="content"
+      slot="tab-content"
+    >
+      <Carousel>
+        <CarouselEmpresasLista />
+      </Carousel>
+    </div>
+
+    <li class="tab-nav_item" slot="tab-item">
+      <a href="#tab-two">Para Estudos</a>
+    </li>
+    <div class="tab-content" id="tab-two" data-tab="content" slot="tab-content">
+      <Carousel>
+        <CarouselEstudosLista />
+      </Carousel>
+    </div>
+  </Tabs>
+</main>
+
+<style lang="scss">
+  main {
+    display: block;
+
+    @media (min-width: 1024px) {
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+  }
+</style>
+
+<script>
+  import { delegate } from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+
+  delegate(document.body, {
+    target: "[data-tippy-content]",
+    delay: 200,
+  });
+</script>

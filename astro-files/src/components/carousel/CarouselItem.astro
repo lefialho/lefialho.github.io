@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import Subtitle from "../Subtitle.astro";
+import Button from "../Button.astro";
+import Chevron from "../Chevron.astro";
+import Tag from "../Tag.astro";
+
+const { title, text, img, alt, link, tecnologias, tag1, tag2 } = Astro.props;
+---
+
+<article class="swiper-slide">
+  <div class="slide">
+    <Subtitle>{title}</Subtitle>
+    
+    <div class="slide-item">
+      <a class="carousel-link" href={link} target="_blank">
+        <Image format="webp" class="carousel-img" src={img} alt={alt} />
+        
+        <Button btnText="Acessar o projeto" target="_blank">
+          <Chevron color="#fff" />
+        </Button>
+      </a>
+
+      <div>
+        <h4 class="carousel-title">Sobre o Projeto:</h4>
+        <p class="carousel-text">
+          {text}
+        </p>
+        
+        <h4 class="carousel-title">O que foi utilizado:</h4>
+        <p class="carousel-text">
+          {tecnologias}
+        </p>
+        
+        <div class="tags">
+          <Tag tag="Frontend" tagText={tag1} />
+          {tag2 && <Tag tag="Design" tagText={tag2} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style lang="scss">
+  @import "./carousel.scss";
+</style>

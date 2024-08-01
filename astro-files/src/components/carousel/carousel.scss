@@ -1,0 +1,35 @@
+.slide-item {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 55% 1fr;
+  }
+}
+
+.carousel-link {
+  display: grid;
+  margin: 0 auto 1.5rem;
+}
+
+.carousel-img {
+  border-radius: 20px;
+  margin: 1.5rem 0;
+}
+
+.url-site {
+  display: inline-block;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+}
+
+.tags {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}

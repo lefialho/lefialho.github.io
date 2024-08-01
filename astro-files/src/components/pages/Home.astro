@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import leandro from "../../assets/img/leandrofialho.png";
+import RedesSociais from "../RedesSociais.astro";
+import Button from "../Button.astro";
+import Chevron from "../Chevron.astro";
+---
+
+<RedesSociais />
+
+<main>
+
+  <div class="conteudo-principal">
+    <h1>Web Portfólio</h1>
+
+    <Image
+      format="webp"
+      src={leandro}
+      alt="Foto do Leandro Fialho"
+      widths={[240, 540, 720, leandro.width]}
+      sizes={`(max-width: 500px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${leandro.width}px`}
+      loading="eager"
+      fetchpriority="high"
+    />
+
+    <pre>
+        <code>
+          &lt;html&gt;
+            &lt;css&gt;
+              &lt;Tailwind /&gt;
+              &lt;Bootstrap /&gt;
+            &lt;/css&gt;
+            &lt;javaScript&gt;
+              &lt;React /&gt;
+              &lt;Vue /&gt;
+            &lt;/javaScript&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+
+    <Button link href="projetos" btnText="Meus Projetos">
+      <Chevron color="#fff" />
+    </Button>
+  </div>
+</main>
+
+<style class="scss">
+  main {
+    animation: anime-in .3s ease-in-out forwards;
+  }
+
+  .conteudo-principal {
+    h1 {
+      font-family: "Qwitcher Grypen", cursive;
+      z-index: 1;
+      font-size: clamp(3rem, 0.9029rem + 5.8252vw, 6rem);
+      font-weight: 100;
+      color: white;
+      line-height: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      z-index: 0;
+      object-fit: contain;
+      height: auto;
+      margin-bottom: 1.5rem;
+      border-radius: 20px;
+    }
+
+    pre {
+      display: none;
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    @media (min-width: 569px) { 
+      img {
+        max-width: 400px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: grid;
+
+      h1,
+      img,
+      pre {
+        grid-area: 1/1;
+      }
+
+      h1 {
+        margin-left: -6rem;
+        margin-top: 2rem;
+        max-width: 100px;
+      }
+
+      pre {
+        display: block;
+        z-index: 2;
+        color: white;
+        align-self: end;
+        justify-self: end;
+        margin-right: -11rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      h1 {
+        margin-left: -8rem;
+      }
+    }
+  }
+</style>
